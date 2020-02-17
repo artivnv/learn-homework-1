@@ -31,3 +31,4 @@ def main():
       return 'Возраст не верен! Введите правильный возраст!'
 result = main()
 print(result)
+
