@@ -14,13 +14,20 @@
   и выводя на экран результаты
 
 """
+line1 = input('Введите первую строку:  ')
+line2 = input('Введите вторую строку:  ')
 
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
-    
-if __name__ == "__main__":
-    main()
+    if type(line1) and type(line2) == str:
+      print('Обе строки являются строками')
+    else:
+      print('Обе введенные строки != str, вернуть 0')
+    if line1 == line2:
+       return 'Строки одинаковые, возвращаем 1'
+    elif line1 != line2 and len(line1) > len(line2):
+       return 'Строки разные и 1 > 2, возвращаем 2'
+    elif line1 != line2 and line2 == 'learn':
+       return 'Строки разные, вторая == "learn", возвращаем 3'
+
+result = main()
+print(result)
