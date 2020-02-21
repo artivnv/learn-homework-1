@@ -12,14 +12,20 @@
 
     Пользователь: Что делаешь?
     Программа: Программирую
-    
-"""
 
+"""
+create_dict = {'Как дела?': 'Хорошо!', 'Что делаешь?': 'Программирую.', 'Нравится?': 'Да.'}
+print('Введите ваш вопрос:')
 def ask_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+    while True:
+      user_say = input('\n')
+      if user_say in create_dict.keys():
+          print(create_dict[user_say])
+      else:
+          print('Вопрос неверный.')
+          break
+
 if __name__ == "__main__":
     ask_user()
+
+
